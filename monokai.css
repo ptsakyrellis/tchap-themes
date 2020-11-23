@@ -1,0 +1,166 @@
+body {
+	font-family: 'Calibri' !important;
+	background-color: #272822;
+}
+
+.dark-panel {
+    background-color: #272822;
+}
+
+.mx_EventTile{
+	font-size:1.1em;
+}
+
+.mx_AutoHideScrollbar_offset, .mx_MessageComposer_wrapper, .mx_Dialog, .mx_JumpToBottomButton_scrollDown,
+.mx_EventTile:hover .mx_EventTile_line, .mx_EventTile.menu .mx_EventTile_line, .mx_TopUnreadMessagesBar_scrollUp.mx_AccessibleButton,
+.mx_MatrixChat > :not(.mx_LeftPanel_container):not(.mx_ResizeHandle){
+	background:#272822;
+	color: #ccc;
+}
+
+.mx_TopUnreadMessagesBar_scrollUp, .mx_JumpToBottomButton_scrollDown {
+	border: 1.3px solid #F92672
+}
+
+.mx_TopUnreadMessagesBar_scrollUp::before, .mx_JumpToBottomButton_scrollDown::before  {
+	background: #F92672;
+}
+
+.mx_MatrixChat > :not(.mx_LeftPanel_container):not(.mx_ResizeHandle)
+
+
+.mx_TopUnreadMessagesBar::after {
+	color: #F92672 !important;
+  background-color: #272822 !important;
+}
+
+.mx_MessageComposer_wrapper {
+	border-top: 4px #333 solid;
+}
+
+.mx_RoomHeader, .mx_TopLeftMenuButton {
+	border-bottom: 4px #333 solid;
+}
+
+.mx_RoomHeader_buttons {
+	background: transparent !important;
+}
+
+.mx_EventTile_editButton {
+	border-color: #F92672;
+	background-color: #272822 !important; 
+	text-align:center;
+}
+
+.mx_EventTile_editButton:after {
+	content: '...';
+}
+
+.mx_EntityTile {
+	color: #A6E22E;
+}
+
+.mx_Username_color3, .mx_Username_color2, .mx_Username_color1, .mx_Username_color4, .mx_Username_color6 .mx_SenderProfile_name.mx_Username_color6, .mx_Username_color5 {
+	color: #66D9EF;
+}
+
+.mx_EventTile_content .markdown-body a.mx_UserPill, .mx_UserPill {
+	background: #1E1E1E;
+	color: #A6E22E;
+}
+
+.mx_BaseAvatar_image {
+	background: none !important;
+}
+
+.mx_MemberList_section .mx_EntityTile_avatar {
+	display: none;
+}
+
+.mx_BaseAvatar_initial {
+	color: #A6E22E !important;
+}
+
+.mx_RoomSubList_chevron {
+	background-color: #66D9EF;
+}
+
+.mx_MemberList h2, .mx_GroupMemberList h2, .mx_GroupRoomList h2, .mx_RoomSubList_label > span {
+	color: #66D9EF;
+	font-size:0.9em;
+}
+
+.mx_EntityTile_avatar, .mx_GroupRoomTile_avatar {
+	padding-bottom: 2px;
+	padding-top: 2px;
+}
+
+.mx_RoomHeader_wrapper, .mx_TopLeftMenuButton {
+	background: #272822;
+}
+
+.mx_AutoHideScrollbar {
+  scrollbar-color: #FD971F transparent;
+}
+
+::selection {
+    background-color: black;
+    color: #FD971F;
+}
+
+.mx_Dialog :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="text"]::placeholder, .mx_Dialog :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="search"]::placeholder, .mx_Dialog .mx_textinput input::placeholder, .mx_MatrixChat :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="text"]::placeholder, .mx_MatrixChat :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="search"]::placeholder, .mx_MatrixChat .mx_textinput input::placeholder {
+ color: #66D9EF;
+}
+
+.mx_RoomTile_name {
+	color: #F92672;
+}
+
+.mx_DateSeparator {
+	color: #F92672;
+	font-size:1.1em;
+	font-weight: bold;
+}
+
+.mx_RoomTile:hover {
+	border-radius: 0px;
+	background-color:#333;
+}
+
+.mx_RoomTile.mx_RoomTile_selected {
+	background-color:#333;
+	border-radius: 0px;
+}
+
+.mx_ResizeHandle > div, .dark-panel :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="text"], .dark-panel :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="search"], .dark-panel .mx_textinput  {
+	background: #333;
+}
+
+.mx_DateSeparator > hr {
+	border-bottom: 4px #555 solid;
+}
+
+.mx_EntityTile_ellipsis .mx_EntityTile_name {
+	color: inherit !important;
+}
+
+.mx_Dialog .mx_textinput > input[type="text"], .mx_Dialog .mx_textinput > input[type="search"], .mx_MatrixChat .mx_textinput > input[type="text"], .mx_MatrixChat .mx_textinput > input[type="search"] {
+	color: #66D9EF;
+}
+
+.mx_RoomHeader_name, .mx_TopLeftMenuButton_name {
+	color: #ccc;
+}
+
+.tc_RepFr_logo {
+	display: none;
+}
+
+.mx_RoomList {
+	border-bottom: 4px #333 solid;
+	margin-bottom: 8px;
+}
+
+.tc_Bottom_Links a {
+	color: #66D9EF;
+}
