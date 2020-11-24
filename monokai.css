@@ -1,14 +1,24 @@
+:root {
+	--dark-panel-base:#272822;
+	--dark-panel-secondary: #333;
+	--text-base: #ccc;
+  --orange-base: #FD971F;
+	--red-base:#F92672;
+	--green-base:#A6E22E;
+	--blue-base:#66D9EF;
+}
+
 body {
 	font-family: 'Calibri' !important;
-	background-color: #272822;
+	background-color: var(--dark-panel-base);
 }
 
 .dark-panel {
-    background-color: #272822;
+    background-color: var(--dark-panel-base);
 }
 
 .mx_ContextualMenu {
-    color: #ccc;
+    color:  var(--text-base);
     font-size: 14px;
 	  background-color: #333;
 	  box-shadow: none;
@@ -16,13 +26,13 @@ body {
 
 .mx_ContextualMenu_chevron_left {
 	  border-top: 8px solid transparent;
-    border-right: 8px solid #333;
+    border-right: 8px solid var(--dark-panel-secondary);
     border-bottom: 8px solid transparent;
 }
 
 .mx_ContextualMenu_chevron_left::after {
     border-top: 7px solid transparent;
-    border-right: 7px solid #333;
+    border-right: 7px solid var(--dark-panel-secondary);
     border-bottom: 7px solid transparent;
 }
 
@@ -33,32 +43,38 @@ body {
 .mx_AutoHideScrollbar_offset, .mx_MessageComposer_wrapper, .mx_Dialog, .mx_JumpToBottomButton_scrollDown,
 .mx_EventTile:hover .mx_EventTile_line, .mx_EventTile.menu .mx_EventTile_line, .mx_TopUnreadMessagesBar_scrollUp.mx_AccessibleButton,
 .mx_MatrixChat > :not(.mx_LeftPanel_container):not(.mx_ResizeHandle){
-	background:#272822;
-	color: #ccc;
+	background:var(--dark-panel-base);
+	color:  var(--text-base);
 }
 
 .mx_TopUnreadMessagesBar_scrollUp, .mx_JumpToBottomButton_scrollDown {
-	border: 1.3px solid #F92672
+	border: 1.3px solid var(--red-base)
 }
 
 .mx_TopUnreadMessagesBar_scrollUp::before, .mx_JumpToBottomButton_scrollDown::before  {
-	background: #F92672;
+	background: var(--red-base);
 }
 
 .mx_MatrixChat > :not(.mx_LeftPanel_container):not(.mx_ResizeHandle)
 
+a:hover, a:link, a:visited {
+	color: var(--orange-base);
+	opacity: 0.8;
+	text-decoration: none;
+	border-bottom:1px #ccc dashed;
+}
 
 .mx_TopUnreadMessagesBar::after {
-	color: #F92672 !important;
-  background-color: #272822 !important;
+	color: var(--red-base) !important;
+  background-color: var(--dark-panel-base) !important;
 }
 
 .mx_MessageComposer_wrapper {
-	border-top: 4px #333 solid;
+	border-top: 4px var(--dark-panel-secondary) solid;
 }
 
 .mx_RoomHeader, .mx_TopLeftMenuButton {
-	border-bottom: 4px #333 solid;
+	border-bottom: 4px var(--dark-panel-secondary) solid;
 }
 
 .mx_RoomHeader_buttons {
@@ -66,8 +82,8 @@ body {
 }
 
 .mx_EventTile_editButton {
-	border-color: #F92672;
-	background-color: #272822 !important; 
+	border-color: var(--red-base);
+	background-color: var(--dark-panel-base) !important; 
 	text-align:center;
 	background-image: none !important;
 	border-radius: 20%;
@@ -79,7 +95,7 @@ body {
 }
 
 .mx_EventTile_content .markdown-body {
-	font-weight: 1.1em;
+	font-size: 1.0em;
 }
 
 .mx_EventTile_editButton:after {
@@ -87,16 +103,16 @@ body {
 }
 
 .mx_EntityTile {
-	color: #A6E22E;
+	color: var(--green-base);
 }
 
 .mx_Username_color3, .mx_Username_color2, .mx_Username_color1, .mx_Username_color4, .mx_Username_color6 .mx_SenderProfile_name.mx_Username_color6, .mx_Username_color5 {
-	color: #66D9EF;
+	color: var(--blue-base);
 }
 
 .mx_EventTile_content .markdown-body a.mx_UserPill, .mx_UserPill {
 	background: #1E1E1E;
-	color: #A6E22E;
+	color: var(--green-base);
 }
 
 .mx_BaseAvatar_image {
@@ -108,15 +124,15 @@ body {
 }
 
 .mx_BaseAvatar_initial {
-	color: #A6E22E !important;
+	color: var(--green-base) !important;
 }
 
 .mx_RoomSubList_chevron {
-	background-color: #66D9EF;
+	background-color: var(--blue-base);;
 }
 
 .mx_MemberList h2, .mx_GroupMemberList h2, .mx_GroupRoomList h2, .mx_RoomSubList_label > span {
-	color: #66D9EF;
+	color: var(--blue-base);
 	font-size:0.9em;
 }
 
@@ -126,44 +142,44 @@ body {
 }
 
 .mx_RoomHeader_wrapper, .mx_TopLeftMenuButton {
-	background: #272822;
+	background: var(--dark-panel-base);
 }
 
 .mx_AutoHideScrollbar {
-  scrollbar-color: #FD971F transparent;
+  scrollbar-color: var(--orange-base) transparent;
 }
 
 ::selection {
     background-color: black;
-    color: #FD971F;
+    color: var(--orange-base);
 }
 
 .mx_Dialog :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="text"]::placeholder, .mx_Dialog :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="search"]::placeholder, .mx_Dialog .mx_textinput input::placeholder, .mx_MatrixChat :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="text"]::placeholder, .mx_MatrixChat :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="search"]::placeholder, .mx_MatrixChat .mx_textinput input::placeholder {
- color: #66D9EF;
+ color: var(--blue-base);
 }
 
-.mx_RoomTile_name {
-	color: #F92672;
+.mx_RoomTile_name, .mx_RoomTileContextMenu_leave {
+	color: var(--red-base);
 }
 
 .mx_DateSeparator {
-	color: #F92672;
+	color: var(--red-base);
 	font-size:1.1em;
 	font-weight: bold;
 }
 
 .mx_RoomTile:hover {
 	border-radius: 0px;
-	background-color:#333;
+	background-color:var(--dark-panel-secondary);
 }
 
 .mx_RoomTile.mx_RoomTile_selected {
-	background-color:#333;
+	background-color:var(--dark-panel-secondary);
 	border-radius: 0px;
 }
 
 .mx_ResizeHandle > div, .dark-panel :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="text"], .dark-panel :not(.mx_textinput):not(.mx_Field):not(.mx_no_textinput) > input[type="search"], .dark-panel .mx_textinput  {
-	background: #333;
+	background: var(--dark-panel-secondary);
 }
 
 .mx_DateSeparator > hr {
@@ -175,7 +191,7 @@ body {
 }
 
 .mx_Dialog .mx_textinput > input[type="text"], .mx_Dialog .mx_textinput > input[type="search"], .mx_MatrixChat .mx_textinput > input[type="text"], .mx_MatrixChat .mx_textinput > input[type="search"] {
-	color: #66D9EF;
+	color: var(--blue-base);
 }
 
 .mx_RoomHeader_name, .mx_TopLeftMenuButton_name {
@@ -187,29 +203,29 @@ body {
 }
 
 .mx_RoomList {
-	border-bottom: 4px #333 solid;
+	border-bottom: 4px var(--dark-panel-secondary) solid;
 	margin-bottom: 8px;
 }
 
 .tc_Bottom_Links a {
-	color: #66D9EF;
+	color: var(--blue-base);
 }
 
 .mx_Dialog_title {
-    color: #FD971F;
+    color: var(--orange-base);
 }
 
 .mx_AddressPickerDialog_input, .mx_AddressPickerDialog_input:focus {
-	color: #66D9EF;
+	color: var(--blue-base);
 }
 
 .mx_RoomDirectory_name {
-	color:  #F92672;
+	color:  var(--red-base);
 	font-size: 1.2em;
 }
 
 .mx_RoomDirectory_topic, .mx_RoomDirectory_roomMemberCount {
-	color: #ccc;
+	color:  var(--text-base);
 }
 
 .mx_RoomDirectory_alias::before {
@@ -221,7 +237,7 @@ body {
 }
 
 .mx_RoomSubList_addRoom::before {
-	background-color: #272822;
+	background-color: var(--dark-panel-base);
 }
 
 .mx_RoomSubList_addRoom {
@@ -230,13 +246,93 @@ body {
 
 .mx_AddressPickerDialog_error {
     margin-top: 18px;
-    color: #F92672;
+    color: var(--red-base);
 }
 
 .mx_MemberEventListSummary_line {
-	border-bottom: 1px #333 solid;
+	border-bottom: 1px var(--dark-panel-secondary) solid;
 }
 
 .mx_MemberEventListSummary_toggle {
-	color: #A6E22E;
+	color: var(--green-base);
+}
+
+.mx_SettingsTab_heading {
+	font-size: 1.6em;
+}
+
+.mx_SettingsTab_subheading {
+	font-size: 1.2em;
+	margin-top: 12px;
+}
+
+.mx_SettingsTab_heading, .mx_SettingsTab_subheading, .mx_SettingsTab_section .mx_SettingsFlag .mx_SettingsFlag_label {
+	color: #fff;
+}
+
+.mx_SettingsTab_subsectionText, .mx_TabbedView_tabLabels {
+	color:  var(--text-base);
+}
+
+.mx_NotificationPanel .mx_EventTile:hover .mx_EventTile_line {
+	background-color: var(--dark-panel-secondary);
+}
+
+.mx_RoomTileContextMenu_separator {
+	border-color: #666;
+}
+
+.mx_RightPanel .mx_RoomView_MessageList .mx_EventTile {
+	padding-bottom: 8px;
+}
+
+.mx_RightPanel .mx_EventTile_roomName a {
+	color:  var(--text-base);
+}
+
+.mx_RightPanel .mx_EventTile_roomName::before {
+	content: "# "
+}
+
+.mx_RoomTileContextMenu_notif_icon.mx_filterFlipColor {
+	display: none;
+}
+
+.mx_EventTile .mx_SenderProfile {
+	color:  var(--text-base);
+}
+
+.mx_MFileBody_download, .mx_MFileBody_download a {
+	color:  var(--text-base);
+}
+
+.mx_MFileBody_download {
+	padding-top: 8px;
+	font-size: 0.8em;
+}
+
+.mx_MFileBody_download a::before {
+	content: '↓';
+}
+
+.mx_MFileBody_download a img {
+	display: none;
+}
+
+.mx_SearchBar .mx_SearchBar_button {
+	border-bottom: 3px solid var(--orange-base);
+	color: var(--text-base);
+}
+
+.mx_Field select:disabled, .mx_Field select:disabled + label, .mx_Field input:disabled, .mx_Field input:disabled + label, .mx_Field textarea:disabled, .mx_Field textarea:disabled + label, .mx_Field select, .mx_Field select + label, .mx_Field input, .mx_Field input + label, .mx_Field textarea, .mx_Field textarea + label  {
+	background-color: var(--dark-panel-base);
+	color: var(--text-base);
+}
+
+.mx_Dialog_content {
+	color: var(--text-base);
+}
+
+.mx_Field {
+	border-color: var(--dark-panel-secondary);
 }
