@@ -61,7 +61,7 @@ a:hover, a:link, a:visited {
 	color: var(--orange-base);
 	opacity: 0.8;
 	text-decoration: none;
-	border-bottom:1px #ccc dashed;
+	border-bottom:1px var(--dark-panel-secondary) solid;
 }
 
 .mx_TopUnreadMessagesBar::after {
@@ -96,6 +96,32 @@ a:hover, a:link, a:visited {
 
 .mx_EventTile_content .markdown-body {
 	font-size: 1.0em;
+}
+
+.mx_EventTile_reply {
+	font-size: 0.8em;
+}
+
+blockquote.mx_ReplyThread {
+	border-left: 6px var(--dark-panel-secondary) solid;
+}
+
+.mx_RoomHeader_name {
+	font-size:1.4em;
+}
+
+.mx_RoomHeader_name::before {
+	content: "#";
+}
+
+.mx_RoomHeader_topic::after, .mx_RoomHeader_topic::before {
+	content: " --- ";
+}
+
+.mx_RoomHeader_topic {
+	font-size: 1.1em;
+	line-height:1.4em;
+	font-style: italic;
 }
 
 .mx_EventTile_editButton:after {
@@ -196,6 +222,15 @@ a:hover, a:link, a:visited {
 
 .mx_RoomHeader_name, .mx_TopLeftMenuButton_name {
 	color: #ccc;
+}
+
+.mx_TopLeftMenu .mx_TopLeftMenu_section_withIcon li:hover {
+	background-color: var(--dark-panel-base);
+}
+
+.mx_TabbedView_tabLabel_active {
+	background-color:  var(--dark-panel-secondary);
+	color: var(--orange-base);
 }
 
 .tc_RepFr_logo {
@@ -334,5 +369,48 @@ a:hover, a:link, a:visited {
 }
 
 .mx_Field {
+	border-color: var(--dark-panel-secondary);
+}
+
+.mx_ReplyPreview {
+	background: var(--dark-panel-secondary);
+	border: 1px var(--orange-base) dotted;
+	border-radius:0;
+}
+
+.mx_ReplyPreview_header {
+	color: var(--text-base);
+	opacity: 1;
+}
+
+.mx_EventTile {
+	padding-top:4px;
+}
+
+.mx_Dialog_content {
+	margin-bottom:0;
+}
+
+.mx_ViewSource pre {
+	padding-bottom:0;
+}
+
+.mx_Dialog {
+	box-shadow: 2px 15px 30px 0 var(--dark-panel-secondary);
+}
+
+.mx_Dialog button, .mx_Dialog input[type="submit"], .mx_Dialog button.mx_Dialog_primary, .mx_Dialog input[type="submit"].mx_Dialog_primary {
+	background: var(--dark-panel-secondary);
+	color: var(--orange-base);
+	border: 1px var(--dark-panel-secondary) solid !important;
+}
+
+.mx_AddressPickerDialog_inputContainer {
+	border-radius: 0;
+	border: 1px var(--dark-panel-secondary) solid;
+}
+
+
+.mx_EventTile:hover.mx_EventTile_unverified .mx_EventTile_line {
 	border-color: var(--dark-panel-secondary);
 }
